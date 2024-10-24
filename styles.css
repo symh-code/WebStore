@@ -1,0 +1,189 @@
+/* Estilos generales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7f6;
+  padding: 20px;
+}
+
+/* Header actualizado */
+
+header {
+  background-color: #ff5722;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title-tienda{
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  text-align: left;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 80px; /* Ajusta la altura del logo */
+  border-color: white;
+  background-color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login {
+  background-color: #ffffff;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+}
+
+.login:hover {
+  background-color: #ff784e;
+  color: white;
+}
+
+.signup {
+  background-color: #ffffff;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+}
+
+.signup:hover {
+  background-color: #ff784e;
+  color: white;
+}
+
+/* Sección de filtro */
+.filter-section {
+  margin: 30px 0;
+  text-align: center;
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  max-width: 100%; /* Previene que el contenedor se desborde en pantallas pequeñas */
+  padding: 0 10px; /* Añadir padding lateral para evitar que toque los bordes */
+}
+
+.filter-section select {
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff5722;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 100%; /* Evita que el select se desborde */
+}
+
+.filter-section select:hover {
+  background-color: #ff784e;
+}
+
+/* Responsiveness para el filtro */
+@media (max-width: 768px) {
+  .filter-section {
+    margin: 20px 0;
+  }
+
+  .filter-section select {
+    font-size: 1em;
+    padding: 8px; /* Reducir padding en pantallas pequeñas */
+  }
+}
+
+
+/* Cards de productos */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
+  gap: 25px;
+}
+
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.product-card h3 {
+  font-size: 1.4em;
+  color: #333;
+  padding: 15px 0 5px;
+}
+
+.product-card p {
+  font-size: 1.2em;
+  color: #ff5722;
+  padding: 0 0 15px;
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  background-color: #ff5722;
+  color: white;
+  padding: 20px 0;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+.social-icon{
+  color: #000000;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+  .product-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
